@@ -19,7 +19,7 @@ The app keeps users engaged with voice notifications and automatic music control
 
 ## Requirements
 
-- **AutoHotkey** can be download from "www.autohotkey.com" //v2
+- **AutoHotkey** can be Installed from "www.autohotkey.com" //v2
   
 - **Python 3.x**
 - **Tkinter**
@@ -27,5 +27,5 @@ The app keeps users engaged with voice notifications and automatic music control
 - 
 ## Watch the Demo
 changed the time values for demo purpose
-[![Watch the video](https://img.youtube.com/vi/Y7_T-ADH60Y.jpg)](https://www.youtube.com/watch?v=Y7_T-ADH60Y)
+[![Watch the video](https://img.youtube.com/vi/Y7_T-ADH60Y/0.jpg)](https://www.youtube.com/watch?v=Y7_T-ADH60Y)
 
