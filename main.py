@@ -27,14 +27,14 @@ def speak(text, rate=200):  # Change the rate of speech
     engine.runAndWait()
 
 def play_song():
-    ahk_script_path = r'open_spotify.ahk' #change the file path 
-    ahk_executable = r'C:\Program Files\AutoHotkey\UX\AutoHotkeyUX.exe'
-    subprocess.run([ahk_executable, ahk_script_path], check=True)
+    ahk_script_path = r'open_spotify.exe' #change the file path 
+    #ahk_executable = r'C:\Program Files\AutoHotkey\UX\AutoHotkeyUX.exe'
+    subprocess.run([ahk_script_path], check=True)
 
 def stop_playback():
-    ahk_stop_script = r'stop_spotify.ahk' #change the file path
-    ahk_executable = r'C:\Program Files\AutoHotkey\UX\AutoHotkeyUX.exe'
-    subprocess.run([ahk_executable, ahk_stop_script], check=True)
+    ahk_stop_script = r'stop_spotify.exe' #change the file path
+    #ahk_executable = r'C:\Program Files\AutoHotkey\UX\AutoHotkeyUX.exe'
+    subprocess.run([ahk_stop_script], check=True)
 
 def validate_input():
     work_time = work_time_entry.get().strip()
@@ -56,8 +56,8 @@ def start_timer():
         if not validate_input():
             return
         
-        work_time = int(work_time_entry.get()) * 60  # Convert to seconds
-        break_time = int(break_time_entry.get()) * 60  # Convert to seconds
+        work_time = int(work_time_entry.get()) * 5  # Convert to seconds
+        break_time = int(break_time_entry.get()) * 5  # Convert to seconds
         timer_running = True
         restart_requested = False
         repeat_active = False
@@ -128,7 +128,7 @@ def countdown(work_time, break_time):
 
 def update_progress_bar():
     try:
-        goal_seconds = float(goal_entry.get()) * 3600 # Convert hours to seconds
+        goal_seconds = float(goal_entry.get()) * 60 # Convert hours to seconds
         progress = (total_study_time / goal_seconds) * 100
         progress_bar.set(progress / 100)  # Set expects a value between 0 and 1
         
