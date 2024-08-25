@@ -11,6 +11,7 @@ The app keeps users engaged with voice notifications and automatic music control
 - Automatically plays and stops music during break times.
 - Ensure active participation by repeatedly announcing until the user manually restarts the session.
 - Session tracking
+- Daily Goal Progress bar
 
 
 ## working on 
