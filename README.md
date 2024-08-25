@@ -27,5 +27,5 @@ The app keeps users engaged with voice notifications and automatic music control
 - 
 ## Watch the Demo
 changed the time values for demo purpose
-[![Watch the video](https://img.youtube.com/vi/Y7_T-ADH60Y/0.jpg)](https://www.youtube.com/watch?v=Y7_T-ADH60Y)
+[![Watch the video](https://img.youtube.com/vi/Y7_T-ADH60Y/0.jpg)](https://youtu.be/xDDumJ7jJe8?si=zpmKf7rfoy5ovz4G)
 
