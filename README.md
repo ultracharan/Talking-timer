@@ -12,7 +12,11 @@ The app keeps users engaged with voice notifications and automatic music control
 - Ensure active participation by repeatedly announcing until the user manually restarts the session.
 - Session tracking
 - Daily Goal Progress bar
+<<<<<<< HEAD
 - Added Daily Task Management Feature 
+=======
+- Included Task List 
+>>>>>>> 62b24a5e80c3b806f37446414b56a3c58ce0a1b9
 
 
 ## working on 
