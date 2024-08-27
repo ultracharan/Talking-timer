@@ -20,6 +20,7 @@ The app keeps users engaged with voice notifications and automatic music control
 
 
 ## working on 
+- releasing .exe file soon , will works on any Desktop
 - **Streak Tracking**: Monitor consecutive days of completed sessions.
 - **Progress Analysis**: Analyze your productivity over time.
 

@@ -50,7 +50,7 @@ def start_timer():
         if not validate_input():
             return
         
-        work_time = int(work_time_entry.get()) * 60  # Convert to seconds
+        work_time = int(work_time_entry.get()) * 60 # Convert to seconds
         break_time = int(break_time_entry.get()) * 60  # Convert to seconds
         timer_running = True
         restart_requested = False
@@ -120,8 +120,9 @@ def countdown(work_time, break_time):
         root.after(0, start_timer)  # Schedule start_timer to run in the main thread
 
 def update_progress_bar():
+    global timer_running, restart_requested
     try:
-        goal_seconds = float(goal_entry.get()) * 360 # Convert hours to seconds
+        goal_seconds = float(goal_entry.get()) * 3600 # Convert hours to seconds
         progress = (total_study_time / goal_seconds) * 100
         progress_bar.set(progress / 100)  # Set expects a value between 0 and 1
         
@@ -132,10 +133,14 @@ def update_progress_bar():
         progress_label.configure(text=f"Completed: {int(hours_completed)}h {int(minutes_completed)}m")
         
         if total_study_time < goal_seconds:
-            root.after(1000, update_progress_bar)  # Call update_progress_bar every second
+            if timer_running:
+                root.after(1000, update_progress_bar)  # Call update_progress_bar every second
         else:
             speak("Congratulations! You have achieved your goal for today. Setup New goal or enjoy the achievement")
-            restart_timer()
+            timer_running = False
+            restart_requested = True
+            stop_all_processes()
+            reset_application_state()
     except ValueError:
         speak("Please enter a valid number for the daily goal.")
 
